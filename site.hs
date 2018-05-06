@@ -10,38 +10,42 @@ import qualified Data.Set as S
 --------------------------------------------------------------------------------
 main :: IO ()
 main = hakyll $ do
+    match "CNAME" $ do
+      route    idRoute
+      compile copyFileCompiler
+
     match "media/*" $ do
-        route   idRoute
-        compile copyFileCompiler
+      route   idRoute
+      compile copyFileCompiler
 
     match "js/*" $ do
-        route   idRoute
-        compile copyFileCompiler
+      route   idRoute
+      compile copyFileCompiler
 
     match "css/*" $ do
-        route   idRoute
-        compile compressCssCompiler
+      route   idRoute
+      compile compressCssCompiler
 
     match "posts/*" $ do
-        route $ setExtension "html"
-        compile $ pandocMathCompiler
-            >>= loadAndApplyTemplate "templates/post.html"    postCtx
-            >>= loadAndApplyTemplate "templates/default.html" postCtx
-            >>= relativizeUrls
+      route $ setExtension "html"
+      compile $ pandocMathCompiler
+          >>= loadAndApplyTemplate "templates/post.html"    postCtx
+          >>= loadAndApplyTemplate "templates/default.html" postCtx
+          >>= relativizeUrls
 
     match "index.html" $ do
-        route idRoute
-        compile $ do
-            posts <- recentFirst =<< loadAll "posts/*"
-            let indexCtx =
-                    listField "posts" postCtx (return posts) `mappend`
-                    constField "title" "Home"                `mappend`
-                    defaultContext
+      route idRoute
+      compile $ do
+          posts <- recentFirst =<< loadAll "posts/*"
+          let indexCtx =
+                listField "posts" postCtx (return posts) `mappend`
+                constField "title" "Home"                `mappend`
+                defaultContext
 
-            getResourceBody
-                >>= applyAsTemplate indexCtx
-                >>= loadAndApplyTemplate "templates/default.html" indexCtx
-                >>= relativizeUrls
+          getResourceBody
+              >>= applyAsTemplate indexCtx
+              >>= loadAndApplyTemplate "templates/default.html" indexCtx
+              >>= relativizeUrls
 
     match "templates/*" $ compile templateBodyCompiler
 
