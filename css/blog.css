@@ -87,7 +87,7 @@ code {
         overflow-x: scroll;
 }
 
-pre.highlight code {
+pre.sourceCode code {
     display: block;
     line-height: 140%;
 }
