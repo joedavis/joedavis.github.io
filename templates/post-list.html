@@ -1,0 +1,16 @@
+<!--<ul>
+    $for(posts)$
+        <li>
+            <a href="$url$">$title$</a> - $date$
+        </li>
+    $endfor$
+</ul>-->
+<ul>
+$for(posts)$
+<li><span>$date$</span> &raquo;
+<a href="$url$">
+$title$
+$if(subtitle)$ — $subtitle$ $endif$
+</a></li>
+$endfor$
+</ul>
