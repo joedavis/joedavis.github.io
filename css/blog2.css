@@ -72,7 +72,7 @@ code {
     overflow-x: auto;
 }
 
-pre.highlight code {
+pre.sourceCode code {
     display: block;
     line-height: 140%;
 }
