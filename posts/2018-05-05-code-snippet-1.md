@@ -8,7 +8,7 @@ background: circuit
 
 Here's a fun little snippet of code I came across on HN a few days ago:
 
-```nasm
+```fasm
 @@: xadd rax, rdx
     loop @b
 ```
