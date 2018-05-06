@@ -10,6 +10,6 @@ Pandoc.
 
 There was however a minor issue in migrating the blog in that the URLs 
 of old posts have changed from the style `/YYYY/MM/DD/$title$.html` to 
-`/YYYY-MM-DD-$title$.html`. Seeing as I haven't exactly had any traffic 
-to the blog, and there hasn't been much worth reading, I didn't see much 
-of an issue in allowing this change.
+`/posts/YYYY-MM-DD-$title$.html`. Seeing as I haven't exactly had any 
+traffic to the blog, and there hasn't been much worth reading, I didn't 
+see much of an issue in allowing this change.
