@@ -7,8 +7,8 @@ git stash
 git checkout develop
 
 # Build new files
-stack exec myblog clean
-stack exec myblog build
+./site clean
+./site build
 
 # Get previous files
 git fetch --all
