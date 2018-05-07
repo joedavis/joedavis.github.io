@@ -45,7 +45,7 @@
 <p>Here’s a fun little snippet of code I came across on HN a few days ago:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode fasm"><code class="sourceCode fasm"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="fu">@@:</span> <span class="bu">xadd</span> <span class="kw">rax</span>, <span class="kw">rdx</span></a>
 <a class="sourceLine" id="cb1-2" data-line-number="2">    <span class="bu">loop</span> @b</a></code></pre></div>
-<p>Given inputs <code>rax</code> <span class="math inline">\(= x_0\)</span>, <code>rdx</code> <span class="math inline">\(= x_1\)</span>, and <code>rcx</code> <span class="math inline">\(= N\)</span>, it computes the <span class="math inline">\(N\)</span>-th element of the sequence,</p>
+<p>Given inputs <code class="sourceCode fasm"><span class="kw">rax</span></code> <span class="math inline">\(= x_0\)</span>, <code class="sourceCode fasm"><span class="kw">rdx</span></code> <span class="math inline">\(= x_1\)</span>, and <code class="sourceCode fasm"><span class="kw">rcx</span></code> <span class="math inline">\(= N\)</span>, it computes the <span class="math inline">\(N\)</span>-th element of the sequence,</p>
 <p><span class="math display">\[x_{n} = x_{n-1} + x_{n-2}\]</span></p>
 <p>For <span class="math inline">\(x_0,x_1 = 0,1\)</span> this is just the <span class="math inline">\(N\)</span>-th Fibonacci number.</p>
 </article>
