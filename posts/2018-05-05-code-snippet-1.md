@@ -13,8 +13,8 @@ Here's a fun little snippet of code I came across on HN a few days ago:
     loop @b
 ```
 
-Given inputs `rax` $= x_0$, `rdx` $= x_1$, and `rcx` $= N$, it computes 
-the $N$-th element of the sequence,
+Given inputs `rax`{.fasm} $= x_0$, `rdx`{.fasm} $= x_1$, and 
+`rcx`{.fasm} $= N$, it computes the $N$-th element of the sequence,
 
 $$x_{n} = x_{n-1} + x_{n-2}$$
 
