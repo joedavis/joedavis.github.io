@@ -1,3 +1,7 @@
+#!/bin/sh
+
+set -e
+
 # Stolen from the hakyll tutorial on github pages
 
 # Temporarily store uncommited changes
