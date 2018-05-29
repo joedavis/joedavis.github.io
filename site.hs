@@ -10,6 +10,10 @@ import qualified Data.Set as S
 --------------------------------------------------------------------------------
 main :: IO ()
 main = hakyll $ do
+    match "favicon.ico" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     match "media/*" $ do
         route   idRoute
         compile copyFileCompiler
