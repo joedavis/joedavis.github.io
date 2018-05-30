@@ -74,6 +74,9 @@ code {
 pre.sourceCode code {
     display: block;
     line-height: 140%;
+    background-color: #f6f6f6;
+    padding: 10pt;
+    border-radius: 8px;
 }
 
 .small { text-align: right; font-size: 8pt; }
