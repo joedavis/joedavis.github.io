@@ -11,8 +11,8 @@ git stash
 git checkout develop
 
 # Build new files
-./site clean
-./site build
+stack exec site clean
+stack exec site build
 
 # Get previous files
 git fetch --all
