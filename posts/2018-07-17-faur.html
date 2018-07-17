@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett">
+<title> Introducing faur —  Physics and Stuff — Joe's Blog</title>
+<meta name="viewport" content="width=device-width">
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+<script src="../js/mathjax-config.js"></script>
+<script src="../js/smart-underline.js"></script>
+<script>SmartUnderline.init();</script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i&amp;subset=greek,latin-ext" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i,600,600i&amp;subset=latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/syntax.css">
+<link rel="stylesheet" href="../css/blog2.css">
+<link rel="shortcut icon" href="../favicon.ico">
+</head>
+<body>
+<div class="page">
+<header>
+<h1>Introducing faur</h1>
+ <h2> An opinionated, lightweight AUR helper </h2> 
+<div id="postdate">
+<span class="time">17 July 2018</span>
+&raquo;
+<span><a href="../">back to top</a></span>
+</div>
+</header>
+
+<article>
+<p>So, in light of the recent issue with malware cropping up in the AUR I decided to stop using AUR helpers like <code>aurman</code> and <code>yay</code> as they make it too easy to just install things without reading the PKGBUILD.</p>
+<p>I reduced down the number of AUR packages I use to around 10 but it’s still rather tedious keeping them updated—having to run <code>cd $pkg &amp;&amp; git pull</code> several times in a row is the sort of thing that should be automated: and that’s exactly what I did.</p>
+<p>AUR helper might be a bit of a misnomer (and certainly an overstatement), it’s a 50 line shell script that does nothing except fetch packages from the aur, check if they need updates, notifying the user about those that do. It’s been useful enough to me, so I decided to polish it up a little bit and push it to the AUR.</p>
+<p>I think the help message/usage example summarizes just how simple it is:</p>
+<pre><code>$ faur help
+USAGE: faur fetch [pkg...]
+       faur update
+       faur help
+
+$ faur update
+The following packages need updating: 
+  ./pyroom
+  ./stack-bin
+
+$ faur fetch hello
+Cloning into 'hello'...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 4 (delta 0)
+Unpacking objects: 100% (4/4), done.</code></pre>
+<p>Packages still have to be installed manually, and <code>faur</code> doesn’t do any dependency resolution which encourages you to <em>actually read</em> the <code>PKGBUILD</code>.</p>
+<p>By default packages get downloaded to <code>~/aur</code>, but this can be configured by means of the environment variable <code>$AURDIR</code>. The url of the AUR is configurable as well, so if, for whatever reason, you want to fetch a package from a users github instead of the AUR you can use</p>
+<pre><code>$ AUR_PATH=https://github.com/bob/ faur fetch my-package</code></pre>
+<p>It’s available at: <a href="https://aur.archlinux.org/packages/faur/" class="uri">https://aur.archlinux.org/packages/faur/</a></p>
+</article>
+
+
+<hr>
+<footer>
+<h3>About The Author</h3>
+I’m an Irish student interested in Physics, Computing, Writing and Linguistics.
+<div>
+<span><a href="https://github.com/joedavis">github</a></span>
+<span><a href="mailto:me@jo.ie">email</a></span>
+<span><a href="https://twitter.com/joed512_">twitter</a></span>
+</div>
+</footer>
+
+<div id="disqus_thread"></div>
+<script>
+
+ /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+ 
+    var disqus_config = function () {
+    this.page.url = 'http://jo.ie/{{ page.url }}';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '{{ page.id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+ (function() { // DON'T EDIT BELOW THIS LINE
+     var d = document, s = d.createElement('script');
+     s.src = 'https://jo-ie.disqus.com/embed.js';
+     s.setAttribute('data-timestamp', +new Date());
+     (d.head || d.body).appendChild(s);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+</body>
+</html>
