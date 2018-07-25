@@ -33,12 +33,16 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
+    match "projects/*" $ compile pandocCompiler
+
     match "index.html" $ do
         route idRoute
         compile $ do
             posts <- recentFirst =<< loadAll "posts/*"
+            projects <- loadAll "projects/*"
             let indexCtx =
                     listField "posts" postCtx (return posts) `mappend`
+                    listField "projects" defaultContext (return projects) `mappend`
                     defaultContext
 
             getResourceBody
