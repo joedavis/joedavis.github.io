@@ -5,7 +5,7 @@ set -e
 # Stolen from the hakyll tutorial on github pages
 
 # Temporarily store uncommited changes
-git stash
+git stash -u
 
 # Verify correct branch
 git checkout develop
