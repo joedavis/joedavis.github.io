@@ -86,3 +86,8 @@ pre.sourceCode code {
 .footnotes { font-size: 16px; line-height: 100%;}
 
 blockquote { font-style: italic; }
+
+a[rel=license] {
+	float: right;
+/*	padding-right: 2em;*/
+}
