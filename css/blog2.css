@@ -8,7 +8,7 @@ html {
 
 body {
 	font-size: 18px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'libertine', 'Linux Libertine', 'Linux Libertine O', serif;
 	margin: auto;
 	max-width: 800px;
 	height: 100%;
@@ -55,13 +55,13 @@ article iframe, article img { max-width: 100%; }
 	}
 }
 
-h1,h2,h3 { }
-header h1 { }
+h1,h2,h3 { font-variant: small-caps; font-weight: normal; letter-spacing: 0.05em; text-align: center; }
+header h1 {}
 
 /*h2,h3,header,*/footer {}
-h1 {}
+h1 { letter-spacing: 0.1em; }
 
-header {}
+header { text-align: center; }
 
 #postdate {}
 
@@ -69,7 +69,8 @@ footer h3,header {
 }
 
 code {
-	font-family: 'IBM Plex Mono', monospace;
+	font-family: 'IBM Plex Mono', 'Inconsolata', monospace;
+	font-size: 16px;
 	overflow-x: auto;
 }
 

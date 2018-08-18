@@ -1,55 +1,55 @@
 @font-face {
-	font-family: "linlibertine";
-	src: url("/fonts/libertine/woff/LinLibertine_R.woff") format("woff"),
-	     url("/fonts/libertine/ttf/LinLibertine_Rah.ttf") format("truetype");
+	font-family: "libertine";
+	src: url("/media/fonts/LinLibertine_R.woff") format("woff"),
+	     url("/media/fonts/LinLibertine_Rah.ttf") format("truetype");
 	font-style: normal;
 	font-weight: normal;
 }
 
 @font-face {
-	font-family: "linlibertine";
-	src: url("/fonts/libertine/woff/LinLibertine_RI.woff") format("woff"),
-	     url("/fonts/libertine/ttf/LinLibertine_RIah.ttf") format("truetype");
+	font-family: "libertine";
+	src: url("/media/fonts/LinLibertine_RI.woff") format("woff"),
+	     url("/media/fonts/LinLibertine_RIah.ttf") format("truetype");
 	font-style: italic;
 	font-weight: normal;
 }
 
 @font-face {
-	font-family: "linlibertine";
-	src: url("/fonts/libertine/woff/LinLibertine_RB.woff") format("woff"),
-	     url("/fonts/libertine/ttf/LinLibertine_RBah.ttf") format("truetype");
+	font-family: "libertine";
+	src: url("/media/fonts/LinLibertine_RB.woff") format("woff"),
+	     url("/media/fonts/LinLibertine_RBah.ttf") format("truetype");
 	font-style: normal;
 	font-weight: bold;
 }
 
 @font-face {
-	font-family: "linlibertine";
-	src: url("/fonts/libertine/woff/LinLibertine_RBI.woff") format("woff"),
-	     url("/fonts/libertine/ttf/LinLibertine_RBIah.ttf") format("truetype");
+	font-family: "libertine";
+	src: url("/media/fonts/LinLibertine_RBI.woff") format("woff"),
+	     url("/media/fonts/LinLibertine_RBIah.ttf") format("truetype");
 	font-style: italic;
 	font-weight: bold;
 }
 
 @font-face {
-	font-family: "linbiolinum";
-	src: url("/fonts/libertine/woff/LinBiolinum_R.woff") format("woff"),
-	     url("/fonts/libertine/ttf/LinBiolinum_Rah.ttf") format("truetype");
+	font-family: "biolinum";
+	src: url("/media/fonts/LinBiolinum_R.woff") format("woff"),
+	     url("/media/fonts/LinBiolinum_Rah.ttf") format("truetype");
 	font-style: normal;
 	font-weight: normal;
 }
 
 @font-face {
-	font-family: "linbiolinum";
-	src: url("/fonts/libertine/woff/LinBiolinum_RI.woff") format("woff"),
-	     url("/fonts/libertine/ttf/LinBiolinum_RIah.ttf") format("truetype");
+	font-family: "biolinum";
+	src: url("/media/fonts/LinBiolinum_RI.woff") format("woff"),
+	     url("/media/fonts/LinBiolinum_RIah.ttf") format("truetype");
 	font-style: italic;
 	font-weight: normal;
 }
 
 @font-face {
-	font-family: "linbiolinum";
-	src: url("/fonts/libertine/woff/LinBiolinum_RB.woff") format("woff"),
-	     url("/fonts/libertine/ttf/LinBiolinum_RBah.ttf") format("truetype");
+	font-family: "biolinum";
+	src: url("/media/fonts/LinBiolinum_RB.woff") format("woff"),
+	     url("/media/fonts/LinBiolinum_RBah.ttf") format("truetype");
 	font-style: normal;
 	font-weight: bold;
 }
